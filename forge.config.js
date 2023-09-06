@@ -11,7 +11,6 @@ module.exports = {
           owner: 'mccahan',
           name: 'aws-credentials-menu'
         },
-        prerelease: true
       }
     }
   ],
