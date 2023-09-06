@@ -18,9 +18,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
     "@aws-sdk/client-sts": "^3.405.0",
+    "@electron-forge/publisher-github": "^6.4.1",
     "electron-prompt": "^1.7.0",
+    "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^8.1.0",
     "menubar": "^9.3.0"
   },
