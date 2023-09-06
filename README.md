@@ -1,5 +1,7 @@
 # AWS Credentials Menu
 
+<img width="230" alt="screenshot" src="https://github.com/mccahan/aws-credentials-menu/assets/2308923/660d9f3a-6b6a-433a-a083-9a77e579cdbe">
+
 A MacOS menu bar utility for generating AWS STS session credentials for the AWS CLI using virtual MFA tokens.
 
 When successfully authenticated, environment variable commands *will be copied to your clipboard*.
