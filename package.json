@@ -1,7 +1,7 @@
 {
   "name": "aws-credentials-menu",
   "productName": "AWS STS Credentials",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate STS session credentials from the menu bar",
   "main": "src/index.js",
   "scripts": {
