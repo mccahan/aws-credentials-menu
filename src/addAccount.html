@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add AWS Account</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <form id="awsForm">
+    <div>
+      <label for="nickname">Nickname:</label>
+      <input type="text" id="nickname" required>
+    </div>
+    <div>
+      <label for="accessKey">Access Key ID:</label>
+      <input type="text" id="accessKey" required>
+    </div>
+    <div>
+      <label for="secretKey">Secret Access Key:</label>
+      <input type="text" id="secretKey" required>
+    </div>
+    <div>
+      <label for="region">Region:</label>
+      <input type="text" id="region" required>
+    </div>
+    <div>
+        <label for="arn">IAM MFA Token ARN:</label>
+        <input type="text" id="arn" required>
+    </div>
+    <div>
+    <div>
+      <label for="duration">Lifetime:</label>
+      <select id="duration">
+        <option value="1800">30 Minutes</option>
+        <option value="3600">1 Hour</option>
+        <option value="14400">4 Hours</option>
+        <option value="43200">12 Hours</option>
+        <option value="86400">1 Day</option>
+      </select>
+    </div>
+  </div>
+
+    <button type="button" id="save">Save</button>
+  </form>
+
+  <script>
+    const saveButton = document.getElementById('save');
+    saveButton.addEventListener('click', function() {
+      const nickname = document.getElementById('nickname').value;
+      const accessKey = document.getElementById('accessKey').value;
+      const secretKey = document.getElementById('secretKey').value;
+      const region = document.getElementById('region').value;
+      const arn = document.getElementById('arn').value;
+      const duration = document.getElementById('duration').value;
+
+      saveButton.disabled = true;
+      // Send the form data to the main process
+      window.api.send('addAccount', { nickname, accessKey, secretKey, region, arn, duration });
+    });
+  </script>
+</body>
+</html>
